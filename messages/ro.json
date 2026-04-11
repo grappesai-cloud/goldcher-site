@@ -1,0 +1,101 @@
+{
+  "nav": {
+    "intro": "Intro",
+    "work": "Proiecte",
+    "eklps": "EKLPS",
+    "press": "Presă",
+    "contact": "Contact"
+  },
+  "hero": {
+    "tagline": "Rafinamentul stă în reținere",
+    "since": "Din 20XX",
+    "place": "București — Lumea",
+    "scroll": "Scroll"
+  },
+  "loader": {
+    "loading": "Se încarcă",
+    "ready": "Intră"
+  },
+  "numbers": {
+    "title": "Cifrele",
+    "caption": "Date actualizate aprilie 2026 · Followeri Spotify preluați live"
+  },
+  "spotify": {
+    "title": "Acum se ascultă",
+    "latest": "Ultima lansare",
+    "topTracks": "Cele mai ascultate",
+    "preview": "Previzualizare",
+    "listen": "Ascultă pe Spotify"
+  },
+  "bio": {
+    "title": "Goldcher",
+    "p1": "Român născut, susținut internațional. Goldcher nu urmărește trenduri — construiește călătorii cinematice în care afro house, melodic house și french touch se topesc unele în altele.",
+    "p2": "Sunetul lui a mișcat publicul din cincisprezece țări și a fost susținut pe BBC Radio 1 de Pete Tong, apreciat de Adriatique, Keinemusik, Rivo, Tiësto, MoBlack și mulți alții.",
+    "p3": "Cu peste 30 de milioane de stream-uri și un catalog tot mai mare de piese nelansate, fiecare set e o conversație — între tensiune și eliberare, disciplină și emoție. Nu performează pentru algoritm; performează pentru încăpere.",
+    "p4": "Producător, performer, constructor de lumi — și fondatorul EKLPS, un concept cultural viu care unește muzica, moda și arta vizuală."
+  },
+  "highlights": {
+    "title": "Momente definitorii",
+    "subtitle": "Selecții"
+  },
+  "supportedBy": {
+    "title": "Susținut în locurile care contează",
+    "subtitle": "Difuzat pe BBC Radio 1 de Pete Tong. Susținut de Adriatique, Keinemusik, Rivo, Tiësto, MoBlack și alții.",
+    "hoverHint": "Hover pentru a reda"
+  },
+  "gallery": {
+    "title": "Momente",
+    "subtitle": "Cadre alese",
+    "mobileHint": "Cadre alese"
+  },
+  "eklps": {
+    "tagline": "un concept viu",
+    "subtitle": "_ unde moda, sunetul, imaginea și mișcarea converg",
+    "visionariesTitle": "vizionarii",
+    "eventsTitle": "evenimentele",
+    "clothingTitle": "brandul de îmbrăcăminte",
+    "spaceTitle": "spațiul",
+    "symbolTitle": "simbolul",
+    "cta": "intră în lumea eklps",
+    "body1": "EKLPS este un centru cultural construit pe viziune, influență și artă. Fondat de Goldcher, Irina Rimes și SAN, există ca un spațiu în care multiple discipline pot coexista: muzică, arte vizuale, performance, modă, storytelling.",
+    "body2": "Fiecare eveniment EKLPS este construit în jurul unui concept și al unei estetici unice — instant recognoscibil, infinit călătoritor. Prima ediție a avut loc la București. A doua la Chișinău.",
+    "body3": "Dincolo de evenimente, EKLPS este o linie de îmbrăcăminte cu piese unice create în workshop-uri live, o serie de sesiuni digitale filmate cu cinematografie terestră și aeriană cu drone, și un hub fizic în pregătire — parte atelier, parte scenă, parte laborator.",
+    "sanBio": "Background în regie, dezvoltare de concept și design de modă. SAN aduce claritate creativă și execuție în EKLPS.",
+    "irinaBio": "Artistă românească celebrată cu o voce distinctă și un public global. Co-fondatoare EKLPS.",
+    "goldcherBio": "House, afro house, melodic house, french touch. Susținut de Adriatique, Keinemusik, Tiësto și Pete Tong. Co-fondator EKLPS."
+  },
+  "press": {
+    "title": "Presă & Download-uri",
+    "subtitle": "Tot ce ai nevoie într-un singur loc",
+    "pressKit": "Press Kit",
+    "logoPack": "Pachet Logo",
+    "photoPack": "Pachet Foto",
+    "download": "Descarcă"
+  },
+  "demos": {
+    "title": "Trimite-mi piesa ta",
+    "subtitle": "Fără filtre, fără gatekeeping. Ascult totul. Dacă mă mișcă, o pun.",
+    "artist": "Nume artist",
+    "email": "Email",
+    "social": "Instagram / SoundCloud (opțional)",
+    "file": "Fișier audio",
+    "fileHint": "MP3, WAV, M4A · Max 50MB",
+    "note": "Mesaj scurt (opțional)",
+    "submit": "Trimite demo",
+    "submitting": "Se încarcă",
+    "success": "Mulțumim — ascultăm tot",
+    "error": "Ceva nu a mers. Încearcă din nou."
+  },
+  "contact": {
+    "title": "Booking & Management",
+    "subtitle": "Pentru show-uri, colaborări, feature-uri — vorbește cu Alex.",
+    "manager": "Alex Gospodin",
+    "agency": "The Ent Bureau",
+    "follow": "Urmărește"
+  },
+  "footer": {
+    "copyright": "© 2026 · goldchermusic.com",
+    "builtIn": "Designed & built by grappes.ai",
+    "returnTop": "Sus"
+  }
+}

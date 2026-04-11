@@ -1,0 +1,82 @@
+[
+  {
+    "id": "bbc-r1",
+    "index": "01",
+    "title": "BBC RADIO 1",
+    "subtitle": "Played by Pete Tong",
+    "videoKey": null,
+    "image": "/gallery/bts-2.jpg"
+  },
+  {
+    "id": "tiesto",
+    "index": "02",
+    "title": "FEATURED WITH TIËSTO",
+    "subtitle": "UNTOLD Collaboration",
+    "videoKey": "tiesto",
+    "image": null
+  },
+  {
+    "id": "shows-2025",
+    "index": "03",
+    "title": "+50 SHOWS IN 2025",
+    "subtitle": "Worldwide tour",
+    "videoKey": "cyclic-alt",
+    "image": null
+  },
+  {
+    "id": "la",
+    "index": "04",
+    "title": "SPOTLIGHT",
+    "subtitle": "Los Angeles",
+    "videoKey": null,
+    "image": "/gallery/lifestyle-1.jpg"
+  },
+  {
+    "id": "miami",
+    "index": "05",
+    "title": "BOHO",
+    "subtitle": "Miami",
+    "videoKey": null,
+    "image": "/gallery/dsc-3.jpg"
+  },
+  {
+    "id": "tahiti",
+    "index": "06",
+    "title": "BAROOF",
+    "subtitle": "Tahiti",
+    "videoKey": null,
+    "image": "/gallery/lifestyle-2.jpg"
+  },
+  {
+    "id": "untold",
+    "index": "07",
+    "title": "UNTOLD",
+    "subtitle": "Romania + Dubai",
+    "videoKey": "untold",
+    "image": null
+  },
+  {
+    "id": "cyclic",
+    "index": "08",
+    "title": "CYCLIC",
+    "subtitle": "Bucharest Residency",
+    "videoKey": "cyclic",
+    "image": null
+  },
+  {
+    "id": "teatru",
+    "index": "09",
+    "title": "TEATRU GASTRONOMIC",
+    "subtitle": "Matahale Series",
+    "videoKey": "matahale",
+    "image": null
+  },
+  {
+    "id": "countries",
+    "index": "10",
+    "title": "15 COUNTRIES",
+    "subtitle": "Played worldwide",
+    "videoKey": "intro",
+    "image": null
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "followers": {
+    "value": 60000,
+    "display": "60K",
+    "label": "FOLLOWERS"
+  },
+  "streams": {
+    "value": 30000000,
+    "display": "30M",
+    "label": "STREAMS"
+  },
+  "views": {
+    "value": 52000000,
+    "display": "52M",
+    "label": "VIEWS"
+  },
+  "playlists": {
+    "value": 12000000,
+    "display": "12M",
+    "label": "PLAYLISTS"
+  },
+  "shazams": {
+    "value": 112000,
+    "display": "112K",
+    "label": "SHAZAMS"
+  },
+  "countries": {
+    "value": 15,
+    "display": "15",
+    "label": "COUNTRIES"
+  }
+}
