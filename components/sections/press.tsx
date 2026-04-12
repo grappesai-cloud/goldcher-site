@@ -34,7 +34,7 @@ export function Press() {
       </Reveal>
 
       <Reveal>
-        <h2 className="font-display font-extrabold text-[clamp(2.5rem,6vw,6.5rem)] leading-[0.92] tracking-[-0.03em] uppercase mb-8 max-w-4xl">
+        <h2 className="font-display font-extrabold text-[clamp(1.8rem,5vw,6.5rem)] leading-[0.92] tracking-[-0.03em] uppercase mb-8 max-w-4xl">
           {t("press.title")}
         </h2>
       </Reveal>

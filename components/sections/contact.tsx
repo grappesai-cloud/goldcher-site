@@ -65,7 +65,7 @@ export function Contact() {
               <Magnetic strength={0.2}>
                 <a
                   href="mailto:office@theentbureau.com"
-                  className="inline-block font-display font-extrabold text-sm sm:text-xl md:text-2xl xl:text-3xl uppercase tracking-tight border-b-2 border-current pb-1 hover:opacity-60 transition-opacity whitespace-nowrap"
+                  className="inline-block font-display font-extrabold text-sm sm:text-xl md:text-2xl xl:text-3xl uppercase tracking-tight border-b-2 border-current pb-1 hover:opacity-60 transition-opacity break-all sm:break-normal"
                   data-cursor-hover
                 >
                   office@theentbureau.com
