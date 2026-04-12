@@ -23,7 +23,9 @@ export default async function Home() {
       <Suspense fallback={null}>
         <NumbersLive artistPromise={artistPromise} />
       </Suspense>
-      <Spotify />
+      <Suspense fallback={null}>
+        <Spotify />
+      </Suspense>
       <Bio />
       <Highlights />
       <SupportedBy />

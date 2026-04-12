@@ -3,8 +3,6 @@ import { getAlbums, getSpotifyOEmbed } from "@/lib/spotify";
 import { Reveal } from "@/components/motion/reveal";
 
 export async function Spotify() {
-  "use cache";
-
   const [albums, oembed] = await Promise.all([
     getAlbums(10),
     getSpotifyOEmbed(),
