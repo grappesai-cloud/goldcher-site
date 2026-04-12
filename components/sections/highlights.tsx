@@ -2,7 +2,7 @@
 
 import { useRef, useState, useEffect, useCallback } from "react";
 import Image from "next/image";
-import { motion, useScroll, useTransform, useMotionValueEvent } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Reveal } from "@/components/motion/reveal";
 import { MuxVideo } from "@/components/media/mux-video";
 import highlightsData from "@/data/highlights.json";
@@ -18,6 +18,7 @@ export function Highlights() {
   const outerRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const [ready, setReady] = useState(false);
+  const [maxOffset, setMaxOffset] = useState(0);
 
   // Count how many media items need to load
   const mediaCount = highlightsData.filter((h) => h.videoKey || h.image).length;
@@ -36,25 +37,12 @@ export function Highlights() {
     return () => clearTimeout(timer);
   }, []);
 
-  // Measure track width and compute how much to translate
-  const [travel, setTravel] = useState("-78%");
-  const [sectionHeight, setSectionHeight] = useState("350vh");
-
+  // Measure the exact pixel overflow of the track
   const measure = useCallback(() => {
     const track = trackRef.current;
     if (!track) return;
-    const trackW = track.scrollWidth;
-    const vpW = window.innerWidth;
-    // How many px the track overflows the viewport
-    const overflow = trackW - vpW;
-    if (overflow <= 0) return;
-    // As a % of track width
-    const pct = (overflow / trackW) * 100;
-    setTravel(`-${pct.toFixed(1)}%`);
-    // Section height: proportional to overflow. More overflow = more scroll runway needed.
-    // ~100vh per viewport-width of overflow, plus the pinned screen
-    const screens = Math.ceil(overflow / vpW);
-    setSectionHeight(`${100 + screens * 100}vh`);
+    const overflow = track.scrollWidth - window.innerWidth;
+    if (overflow > 0) setMaxOffset(overflow);
   }, []);
 
   useEffect(() => {
@@ -63,24 +51,24 @@ export function Highlights() {
     return () => window.removeEventListener("resize", measure);
   }, [measure]);
 
-  // Re-measure when ready changes (track might resize when content appears)
+  // Re-measure when content becomes visible
   useEffect(() => {
     if (ready) measure();
   }, [ready, measure]);
 
-  // Tie horizontal translation to the user's scroll through the outer container
+  // Tie horizontal translation to vertical scroll progress
   const { scrollYProgress } = useScroll({
     target: outerRef,
     offset: ["start start", "end end"],
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", travel]);
+  // Move exactly maxOffset pixels (all cards scroll through completely)
+  const x = useTransform(scrollYProgress, [0, 1], [0, -maxOffset]);
 
   return (
     <section
       ref={outerRef}
-      className="relative w-full"
-      style={{ height: sectionHeight }}
+      className="relative w-full h-[800vh] md:h-[350vh]"
     >
       {/* Sticky pinned viewport */}
       <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col justify-center">
@@ -95,7 +83,7 @@ export function Highlights() {
 
         <motion.div
           ref={trackRef}
-          style={{ x: ready ? x : "0%" }}
+          style={{ x: ready ? x : 0 }}
           className={`flex gap-6 md:gap-8 pl-6 md:pl-10 xl:pl-16 will-change-transform items-stretch transition-opacity duration-700 ${ready ? "opacity-100" : "opacity-0"}`}
         >
           {highlightsData.map((h) => (
