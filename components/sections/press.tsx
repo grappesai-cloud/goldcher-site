@@ -44,27 +44,27 @@ export function Press() {
         </p>
       </Reveal>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+      <div className="flex flex-col gap-3 md:grid md:grid-cols-3 md:gap-8">
         {TILES.map((tile, i) => (
           <Reveal key={tile.key} delay={i * 0.08}>
             <Magnetic strength={0.15}>
               <a
                 href={tile.href}
                 download
-                className="block border border-current/20 hover:border-current/50 p-8 md:p-10 transition-colors min-h-[280px] flex flex-col justify-between"
+                className="border border-current/20 hover:border-current/50 px-5 py-4 md:p-10 transition-colors md:min-h-[280px] flex items-center justify-between md:flex-col md:items-stretch md:justify-between"
                 data-cursor-hover
               >
-                <div className="font-mono text-[10px] uppercase tracking-[0.25em] opacity-60">
-                  {tile.format}
-                </div>
-                <div>
-                  <h3 className="font-display font-extrabold text-3xl md:text-4xl leading-none tracking-tight uppercase">
+                <div className="flex items-center gap-3 md:flex-col md:items-start md:gap-0">
+                  <h3 className="font-display font-extrabold text-base md:text-4xl leading-none tracking-tight uppercase">
                     {t(tile.key)}
                   </h3>
-                  <div className="mt-6 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em]">
-                    <span>{t("press.download")}</span>
-                    <span>↓</span>
-                  </div>
+                  <span className="font-mono text-[9px] md:text-[10px] uppercase tracking-[0.25em] opacity-60 hidden md:block">
+                    {tile.format}
+                  </span>
+                </div>
+                <div className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em]">
+                  <span className="hidden md:inline">{t("press.download")}</span>
+                  <span>↓</span>
                 </div>
               </a>
             </Magnetic>
