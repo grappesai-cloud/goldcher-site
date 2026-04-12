@@ -89,7 +89,7 @@ export function Highlights() {
           {highlightsData.map((h) => (
             <article
               key={h.id}
-              className="shrink-0 w-[72vw] md:w-[38vw] xl:w-[28vw] border-t border-current/20 pt-4 flex flex-col"
+              className="shrink-0 w-[85vw] md:w-[38vw] xl:w-[28vw] border-t border-current/20 pt-4 flex flex-col"
               data-cursor-hover
             >
               <div className="flex items-baseline justify-between font-mono text-[10px] uppercase tracking-[0.25em] opacity-60 mb-4">

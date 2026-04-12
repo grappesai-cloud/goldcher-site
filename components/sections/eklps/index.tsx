@@ -176,7 +176,7 @@ export function EklpsSection() {
             // {t("eklps.symbolTitle")}
           </div>
         </Reveal>
-        <div className="flex flex-col md:flex-row items-center justify-center gap-16 md:gap-24 py-16 md:py-24 mb-24">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-24 py-8 md:py-24 mb-12 md:mb-24">
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
@@ -204,7 +204,7 @@ export function EklpsSection() {
 
         {/* CTA */}
         <Reveal>
-          <div className="flex justify-center pt-16 md:pt-24 border-t border-cream/15">
+          <div className="flex justify-center pt-8 md:pt-24 border-t border-cream/15">
             <a
               href="https://www.instagram.com/_eklps/"
               target="_blank"
