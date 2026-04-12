@@ -83,7 +83,7 @@ export function SupportedBy() {
 
       {/* Name ticker */}
       <Reveal delay={0.2}>
-        <div className="mt-20 md:mt-32 border-t border-current/15 pt-8 flex flex-wrap gap-x-10 gap-y-4 font-mono text-xs md:text-sm uppercase tracking-[0.2em] opacity-80">
+        <div className="mt-20 md:mt-32 border-t border-current/15 pt-8 grid grid-cols-2 md:flex md:flex-wrap gap-x-4 md:gap-x-10 gap-y-3 md:gap-y-4 font-mono text-[11px] md:text-sm uppercase tracking-[0.2em] opacity-80">
           {supportedData.names.map((name) => (
             <span key={name}>· {name}</span>
           ))}
