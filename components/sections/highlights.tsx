@@ -17,6 +17,7 @@ export function Highlights() {
   const { t } = useLocale();
   const outerRef = useRef<HTMLDivElement>(null);
   const [ready, setReady] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   // Count how many media items need to load
   const mediaCount = highlightsData.filter((h) => h.videoKey || h.image).length;
@@ -35,24 +36,31 @@ export function Highlights() {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 767px)");
+    setIsMobile(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
+
   // Tie horizontal translation to the user's scroll through the outer container
   const { scrollYProgress } = useScroll({
     target: outerRef,
     offset: ["start start", "end end"],
   });
 
-  // Total horizontal travel (width of track minus viewport).
-  // We compute as a negative X % based on card count.
-  // 10 cards, each 30vw + gaps. Track width ≈ 10 * 32vw + padding = 320vw
-  // We need to move about -220vw (i.e. 220% of a viewport)
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-78%"]);
+  // Mobile: 10 cards × 78vw (72vw + gap) ≈ 780vw → need -87%
+  // Desktop: 10 cards × 30vw (28vw + gap) ≈ 300vw → need -78%
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", isMobile ? "-88%" : "-78%"]);
 
   return (
     <section
       ref={outerRef}
       className="relative w-full"
       // Outer container is tall so we get scroll runway to drive the pinned inner
-      style={{ height: "350vh" }}
+      // Mobile needs more runway because cards are wider (72vw vs 28vw)
+      style={{ height: isMobile ? "600vh" : "350vh" }}
     >
       {/* Sticky pinned viewport */}
       <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col justify-center">
