@@ -63,7 +63,7 @@ export function Hero() {
 
       {/* Corner metadata */}
       <div className="absolute top-28 md:top-32 left-6 md:left-10 xl:left-16 z-10 font-mono text-[10px] md:text-xs uppercase tracking-[0.25em]">
-        <div className="opacity-60">§01 — Intro</div>
+        <div className="opacity-60">01 — Intro</div>
       </div>
 
       <div className="absolute top-28 md:top-32 right-6 md:right-10 xl:right-16 z-10 font-mono text-[10px] md:text-xs uppercase tracking-[0.25em] text-right">

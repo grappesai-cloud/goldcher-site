@@ -20,7 +20,7 @@ export async function Spotify() {
     >
       <Reveal>
         <div className="flex items-baseline justify-between mb-16 md:mb-24 font-mono text-[10px] md:text-xs uppercase tracking-[0.25em] opacity-60">
-          <span>§03 — Now Playing</span>
+          <span>03 — Now Playing</span>
           <a
             href="https://open.spotify.com/artist/1n9K41Jye8s8F0z1hb1Qhz"
             target="_blank"

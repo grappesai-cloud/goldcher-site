@@ -20,7 +20,7 @@ export function Numbers({ liveFollowers }: { liveFollowers?: number }) {
     <section className="relative w-full px-6 md:px-10 xl:px-16 py-24 md:py-32">
       <Reveal>
         <div className="flex items-baseline justify-between mb-16 md:mb-24 font-mono text-[10px] md:text-xs uppercase tracking-[0.25em] opacity-60">
-          <span>§02 — {t("numbers.title")}</span>
+          <span>02 — {t("numbers.title")}</span>
           <span>Data · 04.2026</span>
         </div>
       </Reveal>

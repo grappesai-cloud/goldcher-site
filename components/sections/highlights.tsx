@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Reveal } from "@/components/motion/reveal";
@@ -16,6 +16,24 @@ type PlaybackKey =
 export function Highlights() {
   const { t } = useLocale();
   const outerRef = useRef<HTMLDivElement>(null);
+  const [ready, setReady] = useState(false);
+
+  // Count how many media items need to load
+  const mediaCount = highlightsData.filter((h) => h.videoKey || h.image).length;
+  const loadedRef = useRef(0);
+
+  const onMediaReady = () => {
+    loadedRef.current += 1;
+    if (loadedRef.current >= mediaCount) {
+      setReady(true);
+    }
+  };
+
+  // Fallback: show after 4s even if not all media loaded
+  useEffect(() => {
+    const timer = setTimeout(() => setReady(true), 4000);
+    return () => clearTimeout(timer);
+  }, []);
 
   // Tie horizontal translation to the user's scroll through the outer container
   const { scrollYProgress } = useScroll({
@@ -39,7 +57,7 @@ export function Highlights() {
       {/* Sticky pinned viewport */}
       <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col justify-center">
         <div className="px-6 md:px-10 xl:px-16 flex items-baseline justify-between mb-6 md:mb-8 font-mono text-[10px] md:text-xs uppercase tracking-[0.25em] opacity-60">
-          <span>§05 — {t("highlights.title")}</span>
+          <span>05 — {t("highlights.title")}</span>
           <span>{t("highlights.subtitle")}</span>
         </div>
 
@@ -48,8 +66,8 @@ export function Highlights() {
         </h2>
 
         <motion.div
-          style={{ x }}
-          className="flex gap-6 md:gap-8 pl-6 md:pl-10 xl:pl-16 will-change-transform items-stretch"
+          style={{ x: ready ? x : "0%" }}
+          className={`flex gap-6 md:gap-8 pl-6 md:pl-10 xl:pl-16 will-change-transform items-stretch transition-opacity duration-700 ${ready ? "opacity-100" : "opacity-0"}`}
         >
           {highlightsData.map((h) => (
             <article
@@ -70,6 +88,7 @@ export function Highlights() {
                     muted
                     className="h-full w-full object-cover"
                     aspect="4/5"
+                    onLoadedData={onMediaReady}
                   />
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 </div>
@@ -81,6 +100,7 @@ export function Highlights() {
                     fill
                     sizes="(max-width: 768px) 72vw, 30vw"
                     className="object-cover"
+                    onLoad={onMediaReady}
                   />
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 </div>

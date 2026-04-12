@@ -66,7 +66,7 @@ export function Loader() {
               return (
                 <motion.span
                   key={i}
-                  className="font-display font-extrabold text-[clamp(3rem,12vw,10rem)] leading-none tracking-tight"
+                  className="font-display font-extrabold text-[clamp(1.5rem,7vw,10rem)] leading-none tracking-tight"
                   animate={{
                     opacity: visible ? 1 : 0.08,
                     y: visible ? 0 : 8,

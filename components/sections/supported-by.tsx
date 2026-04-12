@@ -31,7 +31,7 @@ export function SupportedBy() {
     <section className="relative w-full px-6 md:px-10 xl:px-16 py-24 md:py-32">
       <Reveal>
         <div className="flex items-baseline justify-between mb-16 md:mb-24 font-mono text-[10px] md:text-xs uppercase tracking-[0.25em] opacity-60">
-          <span>§06 — Supported By</span>
+          <span>06 — Supported By</span>
           <span>Industry</span>
         </div>
       </Reveal>
@@ -67,7 +67,7 @@ export function SupportedBy() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
                 <div className="absolute bottom-3 left-3 right-3 flex items-end justify-between text-white">
                   <div>
-                    <div className="font-display font-extrabold text-lg md:text-2xl tracking-tight uppercase">
+                    <div className="font-display font-extrabold text-sm md:text-2xl tracking-tight uppercase">
                       {v.label}
                     </div>
                     <div className="font-mono text-[9px] uppercase tracking-[0.25em] opacity-80">

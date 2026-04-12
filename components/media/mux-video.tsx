@@ -21,6 +21,7 @@ export function MuxVideo({
   controls = false,
   className,
   aspect = "16/9",
+  onLoadedData,
 }: {
   videoKey: PlaybackKey;
   poster?: string;
@@ -30,6 +31,7 @@ export function MuxVideo({
   controls?: boolean;
   className?: string;
   aspect?: string;
+  onLoadedData?: () => void;
 }) {
   const playbackId = playbackIds[videoKey] as string | null;
   const [localMissing, setLocalMissing] = useState(false);
@@ -54,6 +56,7 @@ export function MuxVideo({
         className={className}
         style={{ aspectRatio: aspect }}
         poster={poster}
+        onLoadedData={onLoadedData}
       />
     );
   }
@@ -99,6 +102,7 @@ export function MuxVideo({
       className={className}
       style={{ aspectRatio: aspect, objectFit: "cover" }}
       onError={() => setLocalMissing(true)}
+      onLoadedData={onLoadedData}
     />
   );
 }

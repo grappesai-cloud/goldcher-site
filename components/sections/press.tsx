@@ -28,7 +28,7 @@ export function Press() {
     <section id="press" className="relative w-full px-6 md:px-10 xl:px-16 py-24 md:py-32">
       <Reveal>
         <div className="flex items-baseline justify-between mb-16 md:mb-24 font-mono text-[10px] md:text-xs uppercase tracking-[0.25em] opacity-60">
-          <span>§09 — {t("press.title")}</span>
+          <span>09 — {t("press.title")}</span>
           <span>For press, promoters, labels</span>
         </div>
       </Reveal>

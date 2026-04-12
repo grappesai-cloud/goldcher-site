@@ -28,7 +28,7 @@ export function Contact() {
     >
       <Reveal>
         <div className="flex items-baseline justify-between mb-16 md:mb-24 font-mono text-[10px] md:text-xs uppercase tracking-[0.25em] opacity-60">
-          <span>§11 — Contact</span>
+          <span>11 — Contact</span>
           <span>{t("contact.title")}</span>
         </div>
       </Reveal>

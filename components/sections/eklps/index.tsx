@@ -21,7 +21,7 @@ export function EklpsSection() {
       <div className="px-6 md:px-10 xl:px-16">
         <Reveal>
           <div className="flex items-baseline justify-between mb-12 md:mb-16 font-mono text-[10px] md:text-xs uppercase tracking-[0.25em] opacity-70">
-            <span>§08 — eklps</span>
+            <span>08 — eklps</span>
             <span>{t("eklps.tagline")}</span>
           </div>
         </Reveal>
