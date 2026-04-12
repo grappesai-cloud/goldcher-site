@@ -71,7 +71,7 @@ export function Highlights() {
       className="relative w-full h-[800vh] md:h-[350vh]"
     >
       {/* Sticky pinned viewport */}
-      <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col justify-start pt-20 md:pt-24">
+      <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col justify-start pt-20 md:pt-12">
         <div className="px-6 md:px-10 xl:px-16 flex items-baseline justify-between mb-6 md:mb-8 font-mono text-[10px] md:text-xs uppercase tracking-[0.25em] opacity-60">
           <span>05 — {t("highlights.title")}</span>
           <span>{t("highlights.subtitle")}</span>
