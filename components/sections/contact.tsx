@@ -34,7 +34,7 @@ export function Contact() {
       </Reveal>
 
       <Reveal>
-        <h2 className="font-display font-extrabold text-[1.6rem] sm:text-[clamp(2.5rem,7vw,8rem)] leading-[0.88] tracking-[-0.03em] uppercase mb-6">
+        <h2 className="font-display font-extrabold text-[1.2rem] sm:text-[clamp(1.8rem,5vw,5.5rem)] leading-[0.88] tracking-[-0.03em] uppercase mb-6">
           {t("contact.title")}
         </h2>
       </Reveal>

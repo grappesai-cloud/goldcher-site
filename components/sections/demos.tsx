@@ -85,7 +85,7 @@ export function Demos() {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16">
         <div className="md:col-span-5 md:sticky md:top-32 h-fit">
           <Reveal>
-            <h2 className="font-display font-extrabold text-[clamp(2rem,5vw,5.5rem)] leading-[0.9] tracking-[-0.03em] uppercase mb-6">
+            <h2 className="font-display font-extrabold text-[clamp(1.4rem,3.5vw,3.8rem)] leading-[0.9] tracking-[-0.03em] uppercase mb-6">
               {t("demos.title")}
             </h2>
           </Reveal>

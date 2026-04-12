@@ -5,11 +5,11 @@
    ============================================================ */
 
 :root {
-  /* Goldcher palette — cream base */
-  --cream: #ede9e2;
-  --bone: #f7f4ec;
-  --ink: #0a0a0a;
-  --carbon: #1a1a1a;
+  /* Goldcher palette — dark base */
+  --cream: #050505;
+  --bone: #0f0f0f;
+  --ink: #f0ede6;
+  --carbon: #0a0a0a;
   --ash: #2a2a2a;
   --mist: #8a8a8a;
   --fog: #bdbdbd;
@@ -45,6 +45,7 @@
   --color-foreground: var(--page-fg);
 
   --font-display: var(--font-syne);
+  --font-bebas: var(--font-bebas);
   --font-body: var(--font-inter);
   --font-mono: var(--font-jetbrains);
 }
@@ -119,7 +120,7 @@ a {
   background-image: url("/grain.svg");
   background-size: 200px 200px;
   opacity: 0.05;
-  mix-blend-mode: multiply;
+  mix-blend-mode: screen;
 }
 
 /* ============================================================

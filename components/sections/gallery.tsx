@@ -20,7 +20,7 @@ export function Gallery() {
         </Reveal>
 
         <Reveal>
-          <h2 className="font-display font-extrabold text-[clamp(2.5rem,6vw,6.5rem)] leading-[0.92] tracking-[-0.03em] uppercase mb-12 md:mb-16">
+          <h2 className="font-display font-extrabold text-[clamp(1.8rem,4vw,4.5rem)] leading-[0.92] tracking-[-0.03em] uppercase mb-12 md:mb-16">
             {t("gallery.title")}
           </h2>
         </Reveal>

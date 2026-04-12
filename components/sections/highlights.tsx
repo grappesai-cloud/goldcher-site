@@ -24,7 +24,7 @@ function TickerRow({ reverse = false }: { reverse?: boolean }) {
     <div className="overflow-hidden whitespace-nowrap">
       <div
         className="inline-flex"
-        style={{ animation: `${direction} 40s linear infinite` }}
+        style={{ animation: `${direction} 30s linear infinite` }}
       >
         {items.map((item, i) => (
           <span
@@ -34,12 +34,23 @@ function TickerRow({ reverse = false }: { reverse?: boolean }) {
               fontSize: "clamp(2rem, 5vw, 4rem)",
               WebkitTextStroke: "1px currentColor",
               WebkitTextFillColor: "transparent",
+              transition: "color 0.3s, -webkit-text-fill-color 0.3s",
             }}
           >
             {item}
-            <span className="mx-4 opacity-40" aria-hidden="true">
-              ·
-            </span>
+            <span
+              aria-hidden="true"
+              style={{
+                width: 10,
+                height: 10,
+                borderRadius: "50%",
+                background: "currentColor",
+                display: "inline-block",
+                verticalAlign: "middle",
+                margin: "0 1.5rem",
+                opacity: 0.4,
+              }}
+            />
           </span>
         ))}
       </div>
@@ -60,6 +71,9 @@ export function Highlights() {
         @keyframes ticker-reverse {
           0% { transform: translateX(-50%); }
           100% { transform: translateX(0); }
+        }
+        .ticker-item:hover {
+          -webkit-text-fill-color: currentColor !important;
         }
       `}</style>
 

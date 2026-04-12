@@ -20,6 +20,7 @@ export function Numbers() {
       </Reveal>
 
       <Reveal delay={0.1}>
+        <div className="border-t border-b border-current/10 py-8 md:py-12">
         <div className="flex justify-evenly items-start">
           {STATS.map((stat, i) => (
             <div
@@ -28,7 +29,7 @@ export function Numbers() {
                 i < STATS.length - 1 ? " border-r border-current/15" : ""
               }`}
             >
-              <span className="font-display font-extrabold text-[clamp(2rem,5vw,4rem)] uppercase leading-none">
+              <span className="font-display font-extrabold text-[clamp(2rem,5vw,5rem)] uppercase leading-none">
                 {stat.value}
               </span>
               <span className="font-mono text-[10px] md:text-xs uppercase tracking-widest opacity-60 mt-2">
@@ -36,6 +37,7 @@ export function Numbers() {
               </span>
             </div>
           ))}
+        </div>
         </div>
       </Reveal>
     </section>

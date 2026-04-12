@@ -58,7 +58,7 @@ export function Nav() {
             alt="Goldcher"
             fill
             sizes="140px"
-            className="object-contain object-left invert"
+            className="object-contain object-left"
             priority
           />
         </a>
