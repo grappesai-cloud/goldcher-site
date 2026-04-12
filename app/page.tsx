@@ -18,23 +18,27 @@ export default async function Home() {
   const artistPromise = getLiveArtist();
 
   return (
-    <main className="relative flex min-h-screen flex-col overflow-x-clip">
-      <Hero />
-      <Suspense fallback={null}>
-        <NumbersLive artistPromise={artistPromise} />
-      </Suspense>
-      <Suspense fallback={null}>
-        <Spotify />
-      </Suspense>
-      <Bio />
+    <main className="relative flex min-h-screen flex-col">
+      <div className="overflow-x-clip">
+        <Hero />
+        <Suspense fallback={null}>
+          <NumbersLive artistPromise={artistPromise} />
+        </Suspense>
+        <Suspense fallback={null}>
+          <Spotify />
+        </Suspense>
+        <Bio />
+      </div>
       <Highlights />
-      <SupportedBy />
-      <Gallery />
-      <EklpsSection />
-      <Press />
-      <Demos />
-      <Contact />
-      <Footer />
+      <div className="overflow-x-clip">
+        <SupportedBy />
+        <Gallery />
+        <EklpsSection />
+        <Press />
+        <Demos />
+        <Contact />
+        <Footer />
+      </div>
     </main>
   );
 }
