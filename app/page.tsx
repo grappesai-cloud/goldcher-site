@@ -11,48 +11,24 @@ import { Press } from "@/components/sections/press";
 import { Demos } from "@/components/sections/demos";
 import { Contact } from "@/components/sections/contact";
 import { Footer } from "@/components/chrome/footer";
-import { getArtist } from "@/lib/spotify";
 
 export default async function Home() {
-  // Live follower count (cached 1h via Spotify lib)
-  const artistPromise = getLiveArtist();
-
   return (
-    <main className="relative flex min-h-screen flex-col">
-      <div className="overflow-x-clip">
-        <Hero />
-        <Suspense fallback={null}>
-          <NumbersLive artistPromise={artistPromise} />
-        </Suspense>
-        <Suspense fallback={null}>
-          <Spotify />
-        </Suspense>
-        <Bio />
-      </div>
+    <main className="relative flex min-h-screen flex-col overflow-x-clip">
+      <Hero />
+      <Numbers />
+      <Suspense fallback={null}>
+        <Spotify />
+      </Suspense>
+      <Bio />
       <Highlights />
-      <div className="overflow-x-clip">
-        <SupportedBy />
-        <Gallery />
-        <EklpsSection />
-        <Press />
-        <Demos />
-        <Contact />
-        <Footer />
-      </div>
+      <SupportedBy />
+      <Gallery />
+      <EklpsSection />
+      <Press />
+      <Demos />
+      <Contact />
+      <Footer />
     </main>
   );
-}
-
-async function getLiveArtist() {
-  "use cache";
-  return getArtist();
-}
-
-async function NumbersLive({
-  artistPromise,
-}: {
-  artistPromise: Promise<Awaited<ReturnType<typeof getArtist>>>;
-}) {
-  const artist = await artistPromise;
-  return <Numbers liveFollowers={artist?.followers?.total} />;
 }
