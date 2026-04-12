@@ -44,7 +44,7 @@
   --color-background: var(--page-bg);
   --color-foreground: var(--page-fg);
 
-  --font-display: var(--font-syne);
+  --font-display: var(--font-bebas);
   --font-bebas: var(--font-bebas);
   --font-body: var(--font-inter);
   --font-mono: var(--font-jetbrains);
@@ -85,10 +85,11 @@ h2,
 h3,
 h4 {
   font-family: var(--font-display), sans-serif;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  line-height: 0.9;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 0.85;
   margin: 0;
+  text-transform: uppercase;
 }
 
 p {
@@ -167,8 +168,8 @@ html {
    ============================================================ */
 
 .eklps-zone {
-  background: var(--ink);
-  color: var(--cream);
+  background: var(--carbon);
+  color: var(--ink);
   font-family: var(--font-mono), monospace;
 }
 

@@ -76,7 +76,7 @@ export function Hero() {
         className="absolute inset-x-0 bottom-[14vh] md:bottom-[12vh] z-10 flex items-end px-6 md:px-10 xl:px-16"
         style={{ y: textY }}
       >
-        <div className="relative w-full">
+        <div className="relative w-full text-center">
           <h1 className="sr-only">GOLDCHER</h1>
           <div className="relative w-full aspect-[8/1.4] max-h-[38vh]">
             <Image
@@ -85,10 +85,13 @@ export function Hero() {
               fill
               priority
               sizes="100vw"
-              className="object-contain object-left"
+              className="object-contain object-center"
               style={{ filter: "invert(1)" }}
             />
           </div>
+          <p className="font-mono text-[clamp(0.5rem,1.2vw,0.85rem)] tracking-[0.3em] uppercase opacity-70 mt-3">
+            House — Afro House — Melodic House — French Touch
+          </p>
         </div>
       </motion.div>
 
