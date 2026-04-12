@@ -5,7 +5,10 @@ type SpotifyToken = { access_token: string; expires_in: number };
 async function getToken(): Promise<string | null> {
   const id = process.env.SPOTIFY_CLIENT_ID;
   const secret = process.env.SPOTIFY_CLIENT_SECRET;
-  if (!id || !secret) return null;
+  if (!id || !secret) {
+    console.error("[spotify] Missing env vars", { hasId: !!id, hasSecret: !!secret });
+    return null;
+  }
 
   const res = await fetch("https://accounts.spotify.com/api/token", {
     method: "POST",
@@ -17,21 +20,30 @@ async function getToken(): Promise<string | null> {
     cache: "no-store",
   });
 
-  if (!res.ok) return null;
+  if (!res.ok) {
+    console.error("[spotify] Token fetch failed", res.status, await res.text());
+    return null;
+  }
   const data = (await res.json()) as SpotifyToken;
   return data.access_token;
 }
 
 async function spotifyFetch<T>(endpoint: string): Promise<T | null> {
   const token = await getToken();
-  if (!token) return null;
+  if (!token) {
+    console.error("[spotify] No token, skipping fetch for", endpoint);
+    return null;
+  }
 
   const res = await fetch(`https://api.spotify.com/v1${endpoint}`, {
     headers: { Authorization: `Bearer ${token}` },
     next: { revalidate: 3600, tags: ["spotify"] },
   });
 
-  if (!res.ok) return null;
+  if (!res.ok) {
+    console.error("[spotify] API error", endpoint, res.status, await res.text());
+    return null;
+  }
   return (await res.json()) as T;
 }
 
