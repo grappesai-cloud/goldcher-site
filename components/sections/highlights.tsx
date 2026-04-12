@@ -70,10 +70,7 @@ export function Highlights() {
         </div>
       </Reveal>
 
-      <div className="flex flex-col gap-6 md:gap-8">
-        <TickerRow />
-        <TickerRow reverse />
-      </div>
+      <TickerRow />
     </section>
   );
 }
