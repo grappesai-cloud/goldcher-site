@@ -26,7 +26,7 @@ export function Footer() {
             alt="Goldcher"
             fill
             sizes="100vw"
-            className="object-contain object-left"
+            className="object-contain object-left invert"
           />
         </div>
 
