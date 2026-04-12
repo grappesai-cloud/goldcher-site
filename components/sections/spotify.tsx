@@ -1,8 +1,11 @@
 import Image from "next/image";
+import { connection } from "next/server";
 import { getAlbums, getSpotifyOEmbed } from "@/lib/spotify";
 import { Reveal } from "@/components/motion/reveal";
 
 export async function Spotify() {
+  await connection();
+
   const [albums, oembed] = await Promise.all([
     getAlbums(10),
     getSpotifyOEmbed(),
