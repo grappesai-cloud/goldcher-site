@@ -3,7 +3,6 @@ import { Hero } from "@/components/sections/hero";
 import { Numbers } from "@/components/sections/numbers";
 import { Spotify } from "@/components/sections/spotify";
 import { Bio } from "@/components/sections/bio";
-import { Highlights } from "@/components/sections/highlights";
 import { SupportedBy } from "@/components/sections/supported-by";
 import { Gallery } from "@/components/sections/gallery";
 import { EklpsSection } from "@/components/sections/eklps";
@@ -21,7 +20,6 @@ export default async function Home() {
         <Spotify />
       </Suspense>
       <Bio />
-      <Highlights />
       <SupportedBy />
       <Gallery />
       <EklpsSection />

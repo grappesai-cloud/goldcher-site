@@ -3,6 +3,8 @@
 import { Reveal } from "@/components/motion/reveal";
 import statsData from "@/data/stats.json";
 
+const ACCENT_COLORS = ["#0000FF", "#00FF00", "#FF00FF", "#FF0000"];
+
 const STATS = [
   { value: statsData.followers.display + "+", label: statsData.followers.label },
   { value: statsData.streams.display + "+", label: statsData.streams.label },
@@ -19,7 +21,9 @@ export function Numbers() {
         <div className="flex items-center justify-center gap-4 md:gap-10 flex-wrap px-4 md:px-10">
           {STATS.map((stat, i) => (
             <span key={stat.label} className="flex items-baseline gap-1.5 md:gap-2">
-              <span className="font-display font-extrabold text-base md:text-2xl uppercase leading-none tracking-tight">
+              <span
+                className="font-display font-extrabold text-base md:text-2xl uppercase leading-none tracking-tight"
+              >
                 {stat.value}
               </span>
               <span className="font-mono text-[7px] md:text-[10px] uppercase tracking-[0.1em] opacity-50">

@@ -8,12 +8,6 @@ export function Bio() {
   const { t } = useLocale();
   return (
     <section className="relative w-full px-6 md:px-10 xl:px-16 py-24 md:py-32">
-      <Reveal>
-        <div className="flex items-baseline justify-between mb-16 md:mb-24 font-mono text-[10px] md:text-xs uppercase tracking-[0.25em] opacity-60">
-          <span>04 — Biography</span>
-          <span>The Artist</span>
-        </div>
-      </Reveal>
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16">
         {/* Portrait */}
@@ -21,15 +15,12 @@ export function Bio() {
           <Reveal>
             <div className="relative aspect-[3/4] w-full max-w-sm overflow-hidden">
               <Image
-                src="/images/bio-portrait.jpg"
+                src="/images/bio-portrait-2.jpg"
                 alt="Goldcher portrait"
                 fill
                 sizes="(max-width: 768px) 100vw, 380px"
-                className="object-cover grayscale hover:grayscale-0 transition-all duration-[1.2s]"
+                className="object-cover"
               />
-            </div>
-            <div className="font-mono text-[10px] uppercase tracking-[0.25em] opacity-50 mt-4">
-              // Bucharest · Editorial
             </div>
           </Reveal>
         </div>

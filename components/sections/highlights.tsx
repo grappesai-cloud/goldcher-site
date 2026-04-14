@@ -44,11 +44,10 @@ function TickerRow({ reverse = false }: { reverse?: boolean }) {
                 width: 10,
                 height: 10,
                 borderRadius: "50%",
-                background: "currentColor",
+                background: ["#0000FF", "#00FF00", "#FF00FF", "#FF0000"][i % 4],
                 display: "inline-block",
                 verticalAlign: "middle",
                 margin: "0 1.5rem",
-                opacity: 0.4,
               }}
             />
           </span>
@@ -77,12 +76,6 @@ export function Highlights() {
         }
       `}</style>
 
-      <Reveal>
-        <div className="px-6 md:px-10 xl:px-16 flex items-baseline justify-between mb-6 md:mb-8 font-mono text-[10px] md:text-xs uppercase tracking-[0.25em] opacity-60">
-          <span>05 — {t("highlights.title")}</span>
-          <span>{t("highlights.subtitle")}</span>
-        </div>
-      </Reveal>
 
       <TickerRow />
     </section>

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Syne, Inter, JetBrains_Mono, Bebas_Neue } from "next/font/google";
+import { Courier_Prime } from "next/font/google";
 import "./globals.css";
 import { SmoothScroll } from "@/components/chrome/smooth-scroll";
 import { Cursor } from "@/components/chrome/cursor";
@@ -9,30 +9,10 @@ import { Loader } from "@/components/chrome/loader";
 import { Noise } from "@/components/chrome/noise";
 import { LocaleProvider } from "@/lib/i18n";
 
-const syne = Syne({
-  variable: "--font-syne",
+const courier = Courier_Prime({
+  variable: "--font-courier",
   subsets: ["latin"],
-  weight: ["500", "600", "700", "800"],
-  display: "swap",
-});
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const jetbrains = JetBrains_Mono({
-  variable: "--font-jetbrains",
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  display: "swap",
-});
-
-const bebas = Bebas_Neue({
-  variable: "--font-bebas",
-  subsets: ["latin"],
-  weight: "400",
+  weight: ["400", "700"],
   display: "swap",
 });
 
@@ -74,7 +54,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#050505",
+  themeColor: "#ffffff",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -88,7 +68,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${syne.variable} ${inter.variable} ${jetbrains.variable} ${bebas.variable}`}
+      className={courier.variable}
     >
       <body className="grain">
         <LocaleProvider>

@@ -17,7 +17,7 @@ export function Footer() {
   return (
     <footer
       className="relative w-full overflow-x-clip"
-      style={{ backgroundColor: "var(--carbon)", color: "var(--cream)" }}
+      style={{ backgroundColor: "#0a0a0a", color: "#ffffff" }}
     >
       <div className="px-6 md:px-10 xl:px-16 pt-24 pb-8">
         <div className="relative w-full h-[40px] md:h-[60px] xl:h-[80px]">

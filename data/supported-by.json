@@ -1,46 +1,46 @@
 {
   "videos": [
     {
-      "id": "tiesto-support",
-      "label": "TIËSTO",
-      "caption": "One Taker — UNTOLD",
-      "videoKey": "tiesto"
-    },
-    {
       "id": "keinemusik",
       "label": "KEINEMUSIK",
       "caption": "Support video",
       "videoKey": "keinemusik"
     },
     {
-      "id": "irina",
-      "label": "IRINA RIMES",
-      "caption": "Senzoria · Only One",
-      "videoKey": "irina"
+      "id": "adriatique",
+      "label": "ADRIATIQUE",
+      "caption": "Matahale",
+      "videoKey": "adriatique"
     },
     {
-      "id": "untold-a",
-      "label": "UNTOLD 2024",
-      "caption": "Main stage",
-      "videoKey": "untold"
+      "id": "andme",
+      "label": "&ME",
+      "caption": "Dudadu",
+      "videoKey": "andme"
     },
     {
-      "id": "untold-b",
-      "label": "UNTOLD 2024",
-      "caption": "B-Side",
-      "videoKey": "untold-b"
+      "id": "tiesto-support",
+      "label": "TIËSTO",
+      "caption": "One Taker — UNTOLD",
+      "videoKey": "tiesto"
     },
     {
-      "id": "one-taker",
-      "label": "ONE TAKER",
-      "caption": "Intro",
-      "videoKey": "intro"
+      "id": "moblack",
+      "label": "MOBLACK",
+      "caption": "Support",
+      "videoKey": "moblack"
+    },
+    {
+      "id": "petetong",
+      "label": "PETE TONG",
+      "caption": "BBC Radio 1",
+      "videoKey": "petetong"
     }
   ],
   "names": [
-    "Adriatique",
     "Keinemusik",
-    "Rivo",
+    "Adriatique",
+    "&ME",
     "Tiësto",
     "MoBlack",
     "Pete Tong (BBC R1)"

@@ -48,15 +48,17 @@ export function Cursor() {
       }}
     >
       <motion.div
-        className="rounded-full bg-white"
+        className="select-none"
         animate={{
-          width: hovering ? 48 : 10,
-          height: hovering ? 48 : 10,
-          x: hovering ? -24 : -5,
-          y: hovering ? -24 : -5,
+          scale: hovering ? 1.5 : 1,
+          x: -20,
+          y: -20,
         }}
         transition={{ type: "spring", damping: 22, stiffness: 300 }}
-      />
+        style={{ fontSize: "40px", lineHeight: 1, color: "#FF0000" }}
+      >
+        ツ
+      </motion.div>
     </motion.div>
   );
 }

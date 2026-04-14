@@ -69,7 +69,7 @@ export function Nav() {
               <a
                 href={l.href}
                 onClick={handleClick(l.href)}
-                className="hover:opacity-60 transition-opacity"
+                className="hover:text-[#0000FF] transition-colors"
               >
                 {t(l.key)}
               </a>
@@ -78,7 +78,7 @@ export function Nav() {
           <li>
             <button
               onClick={() => setLocale(locale === "en" ? "ro" : "en")}
-              className="font-mono text-[10px] tracking-widest border border-current px-2 py-1 hover:opacity-60 transition-opacity uppercase"
+              className="font-mono text-[10px] tracking-widest border border-current px-2 py-1 hover:text-[#FF00FF] hover:border-[#FF00FF] transition-colors uppercase"
               data-cursor-hover
             >
               {locale === "en" ? "EN / ro" : "en / RO"}

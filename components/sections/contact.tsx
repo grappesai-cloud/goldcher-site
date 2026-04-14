@@ -26,12 +26,6 @@ export function Contact() {
       id="contact"
       className="relative w-full px-6 md:px-10 xl:px-16 py-24 md:py-32"
     >
-      <Reveal>
-        <div className="flex items-baseline justify-between mb-16 md:mb-24 font-mono text-[10px] md:text-xs uppercase tracking-[0.25em] opacity-60">
-          <span>11 — Contact</span>
-          <span>{t("contact.title")}</span>
-        </div>
-      </Reveal>
 
       <Reveal>
         <h2 className="font-display font-extrabold text-[1.2rem] sm:text-[clamp(1.8rem,5vw,5.5rem)] leading-[0.88] tracking-[-0.03em] uppercase mb-6">
@@ -49,37 +43,38 @@ export function Contact() {
           <Reveal delay={0.18}>
             <div className="border-t border-current/20 pt-8">
               <div className="font-mono text-[10px] uppercase tracking-[0.25em] opacity-60 mb-2">
-                // {t("contact.manager").toLowerCase()}
+                // booking
               </div>
-              <div className="font-display text-2xl md:text-3xl font-bold">
-                {t("contact.manager")}
+              <div className="font-bold text-xl md:text-2xl uppercase tracking-tight">
+                Anceaux Alexandre
               </div>
-              <div className="font-mono text-xs uppercase tracking-[0.2em] opacity-70 mt-1">
-                {t("contact.agency")}
+              <div className="mt-3 flex flex-col gap-2">
+                <a href="mailto:alex@ariamusic.fr" className="text-sm md:text-base opacity-80 hover:opacity-100 transition-opacity" data-cursor-hover>
+                  alex@ariamusic.fr
+                </a>
+                <a href="tel:+33648728358" className="text-sm md:text-base opacity-80 hover:opacity-100 transition-opacity" data-cursor-hover>
+                  +33 6 48 72 83 58
+                </a>
               </div>
             </div>
           </Reveal>
 
           <Reveal delay={0.25}>
-            <div className="mt-10 flex flex-col gap-6">
-              <Magnetic strength={0.2}>
-                <a
-                  href="mailto:office@theentbureau.com"
-                  className="inline-block font-display font-extrabold text-xs sm:text-base md:text-xl xl:text-2xl uppercase tracking-tight border-b-2 border-current pb-1 hover:opacity-60 transition-opacity break-all sm:break-normal"
-                  data-cursor-hover
-                >
-                  office@theentbureau.com
+            <div className="border-t border-current/20 pt-8 mt-10">
+              <div className="font-mono text-[10px] uppercase tracking-[0.25em] opacity-60 mb-2">
+                // management
+              </div>
+              <div className="font-bold text-xl md:text-2xl uppercase tracking-tight">
+                Avi Dahan
+              </div>
+              <div className="mt-3 flex flex-col gap-2">
+                <a href="mailto:avi@funkshway.la" className="text-sm md:text-base opacity-80 hover:opacity-100 transition-opacity" data-cursor-hover>
+                  avi@funkshway.la
                 </a>
-              </Magnetic>
-              <Magnetic strength={0.2}>
-                <a
-                  href="tel:+40765546095"
-                  className="inline-block font-display font-extrabold text-base sm:text-lg md:text-2xl uppercase tracking-tight hover:opacity-60 transition-opacity"
-                  data-cursor-hover
-                >
-                  +40 765 546 095
+                <a href="tel:+12134474143" className="text-sm md:text-base opacity-80 hover:opacity-100 transition-opacity" data-cursor-hover>
+                  +1 (213) 447-4143
                 </a>
-              </Magnetic>
+              </div>
             </div>
           </Reveal>
         </div>
