@@ -49,7 +49,7 @@ export const metadata: Metadata = {
       "Romanian-born, internationally supported electronic music producer and DJ.",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "/icon.png",
   },
 };
 
