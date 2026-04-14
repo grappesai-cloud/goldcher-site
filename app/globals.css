@@ -178,6 +178,16 @@ html {
   scrollbar-width: none;
 }
 
+/* Stats marquee (mobile) */
+@keyframes marquee-stats {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee-stats {
+  animation: marquee-stats 18s linear infinite;
+}
+
 /* ============================================================
    EKLPS section scoped overrides
    ============================================================ */

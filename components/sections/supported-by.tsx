@@ -30,7 +30,7 @@ export function SupportedBy() {
   return (
     <section className="relative w-full px-6 md:px-10 xl:px-16 py-24 md:py-32">
       <Reveal>
-        <h2 className="font-display font-extrabold text-[clamp(2rem,5.5vw,6rem)] leading-[0.92] tracking-[-0.03em] uppercase mb-16 md:mb-24 max-w-4xl">
+        <h2 className="font-display font-extrabold text-[clamp(2rem,5.5vw,6rem)] leading-[0.92] tracking-[-0.03em] uppercase mb-16 md:mb-24 max-w-4xl text-[#FF0000]">
           {t("supportedBy.title")}
         </h2>
       </Reveal>

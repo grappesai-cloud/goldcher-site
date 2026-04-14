@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { PlanetMark } from "./planet-mark";
 import { Reveal } from "@/components/motion/reveal";
 
 const EKLPS_IMAGES = [
@@ -19,15 +18,18 @@ export function EklpsSection() {
       className="eklps-zone relative w-full py-24 md:py-40 overflow-hidden"
     >
       <div className="px-6 md:px-10 xl:px-16">
-        {/* Logo + Title */}
-        <div className="flex flex-col items-center text-center gap-6 mb-16 md:mb-24">
-          <PlanetMark size={80} className="text-[#D5D3CD]" />
-          <Reveal>
-            <h2 className="font-mono text-3xl md:text-5xl lowercase tracking-tight">
-              EKLPS
-            </h2>
-          </Reveal>
-        </div>
+        {/* Logo */}
+        <Reveal>
+          <div className="flex justify-center mb-16 md:mb-24">
+            <Image
+              src="/logos/eklps-logo-2.png"
+              alt="EKLPS logo"
+              width={300}
+              height={100}
+              className="w-[200px] md:w-[300px] h-auto object-contain"
+            />
+          </div>
+        </Reveal>
 
         {/* Video — old hero intro */}
         <Reveal>
@@ -40,7 +42,7 @@ export function EklpsSection() {
               preload="metadata"
               className="h-full w-full object-cover"
             >
-              <source src="/videos/intro.mp4" type="video/mp4" />
+              <source src="/videos/eklps-intro.mp4" type="video/mp4" />
             </video>
           </div>
         </Reveal>

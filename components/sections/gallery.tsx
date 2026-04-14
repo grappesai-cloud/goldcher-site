@@ -12,7 +12,7 @@ export function Gallery() {
     <section className="relative w-full py-24 md:py-32">
       <div className="px-6 md:px-10 xl:px-16">
         <Reveal>
-          <h2 className="font-display font-extrabold text-[clamp(1.8rem,4vw,4.5rem)] leading-[0.92] tracking-[-0.03em] uppercase mb-12 md:mb-16">
+          <h2 className="font-display font-extrabold text-[clamp(1.8rem,4vw,4.5rem)] leading-[0.92] tracking-[-0.03em] uppercase mb-12 md:mb-16 text-[#FF00FF]">
             {t("gallery.title")}
           </h2>
         </Reveal>

@@ -32,35 +32,12 @@ export function Contact() {
           {t("contact.title")}
         </h2>
       </Reveal>
-      <Reveal delay={0.1}>
-        <p className="text-base md:text-lg opacity-80 max-w-xl mb-16 md:mb-24">
-          {t("contact.subtitle")}
-        </p>
-      </Reveal>
+
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16">
         <div className="md:col-span-7">
           <Reveal delay={0.18}>
             <div className="border-t border-current/20 pt-8">
-              <div className="font-mono text-[10px] uppercase tracking-[0.25em] opacity-60 mb-2">
-                // booking
-              </div>
-              <div className="font-bold text-xl md:text-2xl uppercase tracking-tight">
-                Anceaux Alexandre
-              </div>
-              <div className="mt-3 flex flex-col gap-2">
-                <a href="mailto:alex@ariamusic.fr" className="text-sm md:text-base opacity-80 hover:opacity-100 transition-opacity" data-cursor-hover>
-                  alex@ariamusic.fr
-                </a>
-                <a href="tel:+33648728358" className="text-sm md:text-base opacity-80 hover:opacity-100 transition-opacity" data-cursor-hover>
-                  +33 6 48 72 83 58
-                </a>
-              </div>
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.25}>
-            <div className="border-t border-current/20 pt-8 mt-10">
               <div className="font-mono text-[10px] uppercase tracking-[0.25em] opacity-60 mb-2">
                 // management
               </div>
@@ -73,6 +50,25 @@ export function Contact() {
                 </a>
                 <a href="tel:+12134474143" className="text-sm md:text-base opacity-80 hover:opacity-100 transition-opacity" data-cursor-hover>
                   +1 (213) 447-4143
+                </a>
+              </div>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.25}>
+            <div className="border-t border-current/20 pt-8 mt-10">
+              <div className="font-mono text-[10px] uppercase tracking-[0.25em] opacity-60 mb-2">
+                // booking
+              </div>
+              <div className="font-bold text-xl md:text-2xl uppercase tracking-tight">
+                Anceaux Alexandre
+              </div>
+              <div className="mt-3 flex flex-col gap-2">
+                <a href="mailto:alex@ariamusic.fr" className="text-sm md:text-base opacity-80 hover:opacity-100 transition-opacity" data-cursor-hover>
+                  alex@ariamusic.fr
+                </a>
+                <a href="tel:+33648728358" className="text-sm md:text-base opacity-80 hover:opacity-100 transition-opacity" data-cursor-hover>
+                  +33 6 48 72 83 58
                 </a>
               </div>
             </div>

@@ -28,7 +28,7 @@ export function Bio() {
         {/* Bio copy */}
         <div className="md:col-span-7 md:col-start-6 flex flex-col gap-8 md:gap-10">
           <Reveal>
-            <h2 className="font-display font-extrabold text-[clamp(1.4rem,3.2vw,3.2rem)] leading-[0.9] tracking-[-0.03em] uppercase mb-4">
+            <h2 className="font-display font-extrabold text-[clamp(1.4rem,3.2vw,3.2rem)] leading-[0.9] tracking-[-0.03em] uppercase mb-4 text-[#0000FF]">
               {t("bio.title")}
             </h2>
           </Reveal>
