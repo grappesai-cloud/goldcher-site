@@ -40,12 +40,3 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Videos — served via Mux, not stored in git
-public/videos/
-
-# Large binary assets — served via Vercel Blob / CDN
-public/gallery/
-public/images/
-public/eklps/
-public/logos/
-public/downloads/
