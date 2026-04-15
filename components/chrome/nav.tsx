@@ -26,7 +26,7 @@ function scrollTo(target: string) {
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
-  const { locale, setLocale, t } = useLocale();
+  const { t } = useLocale();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -75,15 +75,6 @@ export function Nav() {
               </a>
             </li>
           ))}
-          <li>
-            <button
-              onClick={() => setLocale(locale === "en" ? "ro" : "en")}
-              className="font-mono text-[10px] tracking-widest border border-current px-2 py-1 hover:text-[#FF00FF] hover:border-[#FF00FF] transition-colors uppercase"
-              data-cursor-hover
-            >
-              {locale === "en" ? "EN / ro" : "en / RO"}
-            </button>
-          </li>
         </ul>
 
       </nav>

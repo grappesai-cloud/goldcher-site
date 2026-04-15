@@ -61,9 +61,6 @@ export function Hero() {
               style={{ filter: "invert(1)" }}
             />
           </div>
-          <p className="font-mono text-[clamp(0.5rem,1.2vw,0.85rem)] tracking-[0.3em] uppercase opacity-70 mt-3">
-            House — Afro House — Melodic House — French Touch
-          </p>
         </div>
       </motion.div>
 
