@@ -33,7 +33,17 @@ export function Footer() {
         <div className="mt-16 flex flex-col md:flex-row items-start md:items-end justify-between gap-6 font-mono text-[11px] uppercase tracking-widest">
           <div className="flex flex-col gap-1">
             <span>{t("footer.copyright")}</span>
-            <span className="opacity-60">{t("footer.builtIn")}</span>
+            <span className="opacity-60">
+              {t("footer.builtIn")}{" "}
+              <a
+                href="https://grappes.dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-2 hover:opacity-100 transition-opacity"
+              >
+                grappes.dev
+              </a>
+            </span>
           </div>
           <button onClick={scrollTop} className="hover:opacity-60 transition-opacity">
             {t("footer.returnTop")} ↑
