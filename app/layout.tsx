@@ -48,9 +48,34 @@ export const metadata: Metadata = {
     description:
       "Romanian-born, internationally supported electronic music producer and DJ.",
   },
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: "/icon.png",
   },
+};
+
+// Artist structured data — helps Google identify Goldcher as a music act and
+// surface the knowledge panel / profiles for "goldcher", "goldcher dj" searches.
+const musicSchema = {
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  name: "Goldcher",
+  alternateName: ["Goldcher Music", "Goldcher DJ"],
+  description:
+    "Goldcher — electronic music producer and DJ. House, afro house, melodic house, french touch.",
+  genre: ["House", "Afro House", "Melodic House", "French Touch"],
+  url: "https://goldchermusic.com",
+  image: "https://goldchermusic.com/opengraph-image",
+  sameAs: [
+    "https://www.instagram.com/goldchermusic/",
+    "https://www.tiktok.com/@goldchermusic",
+    "https://www.youtube.com/@Goldchermusic",
+    "https://open.spotify.com/artist/1n9K41Jye8s8F0z1hb1Qhz",
+    "https://www.beatport.com/artist/goldcher/1211919",
+    "https://soundcloud.com/goldcher",
+  ],
 };
 
 export const viewport: Viewport = {
@@ -71,6 +96,10 @@ export default function RootLayout({
       className={courier.variable}
     >
       <body className="grain">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(musicSchema) }}
+        />
         <LocaleProvider>
           <Loader />
           <Noise />
