@@ -94,6 +94,12 @@ const structuredData = {
   ],
 };
 
+// Cloudflare Web Analytics beacon. goldchermusic.com is grey-cloud (DNS-only)
+// on Cloudflare, so server-side zone analytics see zero traffic — this
+// client-side beacon is the only way to get real visitor numbers. Token is
+// public by design (it ships in the page HTML). Empty = beacon not rendered.
+const CF_BEACON_TOKEN = "766d0f5e19714242b02d361d14fc1dd4";
+
 export const viewport: Viewport = {
   themeColor: "#ffffff",
   width: "device-width",
@@ -116,6 +122,13 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
+        {CF_BEACON_TOKEN && (
+          <script
+            defer
+            src="https://static.cloudflareinsights.com/beacon.min.js"
+            data-cf-beacon={JSON.stringify({ token: CF_BEACON_TOKEN })}
+          />
+        )}
         <LocaleProvider>
           <Loader />
           <Noise />
